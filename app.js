@@ -24,15 +24,17 @@ function errorHandling(obj) {
 advertForm.addEventListener('submit', (e) => {
   e.preventDefault();
   let formItems = e.target.elements;
+  let timeStamp = new Date();
 
-  advertItem.image = formItems.image.value;
+  advertItem.imageSrc = formItems.image.value;
   advertItem.userName = formItems.name.value;
+  advertItem.userSurname = formItems.surname.value;
   advertItem.userPhone = formItems.phone.value;
   advertItem.userEmail = formItems.email.value;
   advertItem.title = formItems.title.value;
   advertItem.price = formItems.price.value;
   advertItem.description = formItems.text.value;
-
+  advertItem.term = `${new Intl.DateTimeFormat("en-US", { month: "long" }).format(timeStamp)} ${timeStamp.getFullYear()}`;
   errorHandling(advertItem);
 });
 
@@ -46,15 +48,15 @@ const adBase = [
   {
     image: `${'<img src="./powerbank.jpg" alt="item" />'}`,
     name: 'Joseph',
-    term:  `<p>User since: <b>December 2022</b></p>`,
+    term: `<p>User since: <b>December 2022</b></p>`,
   },
 ];
 
 // function to inject advertisement data 
 const injectData = () => {
   photo.innerHTML = adBase[0].image;
-  userName.innerText = adBase[0].name;  
-  
+  userName.innerText = adBase[0].name;
+
 }
 
 injectData();
