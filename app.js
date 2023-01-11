@@ -1,5 +1,4 @@
 let advertItems;
-
 if (localStorage.getItem('adverData')) {
   advertItems = JSON.parse(localStorage.getItem('adverData'));
 } else {
@@ -56,7 +55,6 @@ function errorHandling(obj) {
     advertItems.push(obj);
     localStorage.setItem('adverData', JSON.stringify(advertItems)); // add data to local storage
   } catch (e) {
-    // statements to handle any exceptions
     console.error(e); // pass exception object to error handler
   }
 }
@@ -82,8 +80,29 @@ if (advertForm) {
   });
 }
 
-//get Data from local storage
-console.log(advertItems);
+//code to render home page
+const advertContainer = document.querySelector('.cards-container');
+
+if (advertContainer) {
+
+  for (let index = 0; index < advertItems.length; index++) {
+    const element = advertItems[index];
+
+    advertContainer.insertAdjacentHTML('beforeend', `
+    <div class="card">
+      <div class="card-header">
+        <img src="${element.imageSrc}" alt="img" />
+      </div>
+      <div class="card-body">
+        <h3 class="title">${element.title}</h3>
+      </div>
+      <div class="card-footer">
+        <span class="price">$ ${element.price}</span>
+      </div>
+    </div>
+  `);
+  }
+}
 
 
 
