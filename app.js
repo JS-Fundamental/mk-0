@@ -21,7 +21,6 @@ function errorHandling(obj) {
   }
 }
 
-
 advertForm.addEventListener('submit', (e) => {
   e.preventDefault();
   let formItems = e.target.elements;
@@ -36,3 +35,30 @@ advertForm.addEventListener('submit', (e) => {
 
   errorHandling(advertItem);
 });
+
+
+// Code to render single item
+const photo = document.querySelector('.photo');
+const userName = document.querySelector('.name');
+const term = document.querySelector('.name-general');
+
+const adBase = [
+  {
+    image: `${'<img src="./powerbank.jpg" alt="item" />'}`,
+    name: 'Joseph',
+    term:  `<p>User since: <b>December 2022</b></p>`,
+  },
+];
+
+// function to inject advertisement data 
+const injectData = () => {
+  photo.innerHTML = adBase[0].image;
+  userName.innerText = adBase[0].name;  
+  
+}
+
+injectData();
+
+// <p>User since: <b>December 2022</b></p>
+//  <p class="deals"><b>+500 </b>Successful deals</p>
+
