@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create an Advertisement</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="form-header">
+        <h1>Create an Advertisement</h1>
+        <p>Fill in the form below to add a new advertisement</p>
+      </div>
+      <form id="advert-form">
+        <p>Provide your contact data</p>
+        <div id="fullName">
+          <input type="text" name="userName" id="name" />
+          <label for="userName">Name</label>
+          <input type="text" name="userSurname" id="surname" />
+          <label for="userSurname">Surname</label>
+        </div>
+        <input type="email" name="userEmail" id="email" />
+        <label for="userEmail">E-mail</label>
+        <input type="tel" name="userPhone" id="phone" pattern="[0-9]{10}" />
+        <label for="userTell">Phone Number</label>
+        <div id="advert-content">
+          <label for="title">Title</label>
+          <input type="text" name="title" id="title" />
+          <label for="price">Price $</label>
+          <input type="text" name="price" id="price" />
+          <label for="advertText">Description</label>
+          <textarea name="advertText" id="text" rows="7"></textarea>
+          <label for="userImage">Add an image</label>
+          <input
+            type="file"
+            name="userImage"
+            id="image"
+            accept="image/*,.pdf"
+          />
+        </div>
+        <input
+          name="submit"
+          id="submitBtn"
+          type="submit"
+          value="Add an Advertisement"
+        />
+      </form>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
