@@ -1,0 +1,151 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; /* This defines what 1rem is: 1rem = 10px */
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 0;
+  box-sizing: border-box;
+  background-color:#f0f8ff;
+  color: #212427;
+}
+
+.container {
+  display: flex;
+  justify-content:space-around;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+img {
+  width: 30rem;
+}
+
+.photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  width: 50rem;
+  height: 50rem;
+}
+
+.user {
+  width: 30rem;
+  height: auto;
+  background-color: #fff;
+}
+
+.user h2 {
+  padding: 3rem 2rem;
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.user-info {
+  display: flex;
+  font-size: 1.4rem;
+}
+
+.user-icon {
+  font-size: 4rem;
+  padding: 2.5rem;
+}
+
+.name p:first-child {
+  font-size: 2rem;
+  font-weight: 600;
+  padding-top: 2.4rem;
+  padding-bottom: 0.5rem;
+}
+
+.deals {
+  margin-top: 4rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.communication {
+  display: flex;
+  justify-content: center;
+  padding-top: 5rem;
+}
+
+.mobile, .message {
+  margin-right: 1rem;
+  margin-top: 4rem;
+  border: none;
+  background: #4efbb1;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+
+.mobile:hover, .message:hover {
+  opacity: 0.7;
+}
+
+.btn-back {
+  margin-left: 4rem;
+  margin-top: 2rem;
+  border: none;
+  background: #9dbcff;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  color:#fff;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+  font-size: 1.7rem;
+}
+
+.btn-back:hover {
+  opacity: 0.7;
+}
+
+.description {
+  width: 82rem;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  background-color: #fff;
+  height: auto;
+}
+
+.description h2 {
+  padding-top: 3rem;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.price {
+  font-size: 4rem;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  font-weight: 700;
+}
+
+.description li {
+  font-size: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  list-style: none;
+}
+
+li:last-child {
+  padding-bottom: 7rem;
+}
