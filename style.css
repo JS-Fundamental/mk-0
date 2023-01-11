@@ -3,15 +3,20 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
-}
+  box-sizing: border-box;
+  }
 
 html {
   font-size: 62.5%; /* This defines what 1rem is: 1rem = 10px */
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+  background-color: #f2f4f5;
+}
+
+/* Post page styles */
+.main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,10 +34,6 @@ body {
   margin-top: 4rem;
 }
 
-img {
-  width: 30rem;
-}
-
 .photo {
   display: flex;
   flex-direction: column;
@@ -41,6 +42,10 @@ img {
   background-color: #fff;
   width: 50rem;
   height: 50rem;
+}
+
+.photo img {
+  width: 30rem;
 }
 
 .user {
@@ -94,6 +99,7 @@ img {
   color: #fff;
   cursor: pointer;
   font-size: 1.7rem;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .mobile:hover, .message:hover {
@@ -101,7 +107,7 @@ img {
 }
 
 .btn-back {
-  margin-left: 4rem;
+ margin-left: 4rem;
   margin-top: 2rem;
   border: none;
   background: #9dbcff;
@@ -112,7 +118,7 @@ img {
   transition: opacity 0.2s ease-in-out;
   font-size: 1.7rem;
 }
-
+  
 .btn-back:hover {
   opacity: 0.7;
 }
@@ -148,4 +154,206 @@ img {
 
 li:last-child {
   padding-bottom: 7rem;
+}
+
+/* Home page Styles */
+.wrapper {
+  width: 1320px;
+  margin: 2rem auto 0;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #9dbcff;
+}
+
+.nav {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav.wrapper {
+  margin-top: 0;
+}
+
+.nav .logo img {
+  height: 4.8rem;
+}
+
+.nav .btn {
+  display: block;
+  background: #4efbb1;
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.6rem;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.nav .btn:hover {
+  opacity: 0.7;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 3rem;
+  margin-top: 12rem;
+}
+
+.card {
+  padding: 2rem;
+  color: #212427;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.card-header,
+.card-body,
+.card-footer {
+  margin-bottom: 2rem;
+}
+
+.card-header img {
+  width: 100%;
+  display: block;
+}
+
+.card-body h3 {
+  font-size: 1.6rem;
+}
+
+.card-footer {
+  border-top: 0.1rem #ececec solid;
+}
+
+.card-footer span {
+  display: block;
+  padding-top: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4efbb1;
+  line-height: 1;
+}
+
+/* Form Styling */
+.form-header h1,
+.form-header p {
+  text-align: center;
+}
+
+.form-header h1 {
+  font-size: 3rem;
+}
+
+.form-header p {
+  font-size: 1.8rem;
+  margin: 2rem 0 6rem;
+}
+
+#advert-form {
+  background-color: #fff;
+  width: 60rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 4rem 8rem;
+  margin: 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+#advert-form p {
+  font-size: 1.4rem;
+  padding-bottom: 2rem;
+  align-self: flex-start;
+}
+
+#advert-form input,
+#advert-content textarea {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+}
+
+#advert-form input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #212427;
+}
+
+#advert-form label {
+  font-size: 1.4rem;
+  padding-bottom: 2rem;
+  color: #ccc;
+}
+
+#fullName,
+#advert-content {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+#advert-content input {
+  width: 100%;
+}
+
+#advert-content label {
+  align-self: flex-start;
+  padding: 2rem 0;
+  color: #212427;
+}
+
+#advert-content textarea {
+  border-radius: 1.5rem;
+  border: 1px solid #ccc;
+  resize: none;
+  width: 100%;
+  padding: 1rem;
+}
+
+#advert-content #image {
+  padding: 0.5rem;
+  border: none;
+}
+
+#advert-content #image::file-selector-button {
+  margin-right: 2rem;
+  border: none;
+  background: #9dbcff;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  color:#fff;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+  font-size: 1.7rem;
+}
+
+#advert-content #image::file-selector-button:hover {
+  opacity: 0.7;
+}
+
+#advert-form #submitBtn {
+  margin-top: 4rem;
+  border: none;
+  background: #4efbb1;
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+}
+#advert-form #submitBtn:hover {
+  opacity: 0.7;
 }
