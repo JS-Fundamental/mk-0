@@ -337,6 +337,10 @@ nav {
   padding: 1rem;
 }
 
+#advert-content .preview img {
+  padding-top: 6rem;
+}
+
 #advert-form #submitBtn {
   margin-top: 4rem;
   border: none;

@@ -3,14 +3,14 @@ if (localStorage.getItem('adverData')) {
   advertItems = JSON.parse(localStorage.getItem('adverData'));
 } else {
   advertItems = [{
-    "imageSrc": "./img/powerbank.jpg",
-    "userName": "Joseph",
-    "userSurname": "Doe",
-    "userPhone": "0602332444",
-    "userEmail": "joseph@gmail.net",
-    "title": "Anker 737 Power Bank 140W 24000mAh",
-    "price": "149.99",
-    "description": `
+    imageSrc: "./img/powerbank.jpg",
+    userName: "Joseph",
+    userSurname: "Doe",
+    userPhone: "0602332444",
+    userEmail: "joseph@gmail.net",
+    title: "Anker 737 Power Bank 140W 24000mAh",
+    price: "149.99",
+    description: `
     Ultra-Powerful Two-Way Charging:</b> Equipped with the latest
     Power Delivery 3.1 and bi-directional technology to quickly recharge
     the portable charger or get a 140W ultra-powerful charge.
@@ -23,22 +23,37 @@ if (localStorage.getItem('adverData')) {
     What You Get: Anker 737 Power Bank (PowerCore 24K), welcome
     guide, 140W USB-C to USB-C cable, 24-month stress-free warranty, and
     friendly customer service.`,
-    "term": "December 2022"
+    term: "December 2022"
   },
   {
-    "imageSrc": "./img/Charger_747.jpg",
-    "userName": "Maxim",
-    "userSurname": "Doe",
-    "userPhone": "0602332444",
-    "userEmail": "maxim@gmail.net",
-    "title": "Some Charger 140W 24000mAh",
-    "price": "1000.00",
-    "description": `
+    imageSrc: "./img/Charger_747.jpg",
+    userName: "Maxim",
+    userSurname: "Doe",
+    userPhone: "0602332444",
+    userEmail: "maxim@gmail.net",
+    title: "Some Charger 140W 24000mAh",
+    price: "1000.00",
+    description: `
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate consectetur, 
     tenetur aspernatur nulla ducimus rem laboriosam doloribus aperiam repudiandae autem 
     nesciunt accusantium optio quibusdam eveniet? Quisquam doloremque eveniet earum dicta.
     `,
-    "term": "January 2023"
+    term: "January 2023"
+  },
+  {
+    imageSrc: "./img/PowerStation_767.jpg",
+    userName: "Veronika",
+    userSurname: "Doe",
+    userPhone: "0802233444",
+    userEmail: "ver@gmail.com",
+    title: "Some PowerStation",
+    price: "10856.00",
+    description: `
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate consectetur, 
+    tenetur aspernatur nulla ducimus rem laboriosam doloribus aperiam repudiandae autem 
+    nesciunt accusantium optio quibusdam eveniet? Quisquam doloremque eveniet earum dicta.
+    `,
+    term: "December 2023"
   }];
 }
 
@@ -60,6 +75,14 @@ function errorHandling(obj) {
 }
 
 if (advertForm) {
+  const urlInput = document.querySelector('#image');
+  const previewOut = document.querySelector('.preview');
+  urlInput.addEventListener('input', (e) => {
+    previewOut.innerHTML = `<div class="card-header">
+    <img src="${e.target.value}" alt="img" />
+  </div>`
+  });
+
   advertForm.addEventListener('submit', (e) => {
     e.preventDefault();
     let formItems = e.target.elements;
@@ -104,9 +127,6 @@ if (advertContainer) {
   }
 }
 
-
-
-/*
 // Code to render single item
 const photo = document.querySelector('.photo');
 const userName = document.querySelector('.name');
@@ -131,4 +151,3 @@ injectData();
 
 // <p>User since: <b>December 2022</b></p>
 //  <p class="deals"><b>+500 </b>Successful deals</p>
-*/
