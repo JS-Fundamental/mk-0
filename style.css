@@ -163,6 +163,7 @@ nav {
   left: 0;
   width: 100%;
   background-color: #9dbcff;
+  z-index: 1;
 }
 
 .nav {
@@ -212,6 +213,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .card-header,
@@ -232,6 +234,11 @@ nav {
   max-height: 26rem;
   max-width: 26rem;
   display: block;
+  transition: 0.3s ease;
+}
+
+.card:hover .card-header img {
+  transform: scale(1.1);
 }
 
 .card-body h3 {
