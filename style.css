@@ -354,3 +354,67 @@ nav {
 #advert-form #submitBtn:hover {
   opacity: 0.7;
 }
+
+/* Media queries. CSS Breakpoints based on content. */
+/* This means you add a breakpoint when the content looks misaligned */
+/* 1400px */
+@media (width <= 1400px) {
+  body {
+    background-color: #4efbb1;
+  }
+
+  .wrapper {
+    width: 960px;
+    margin: 2rem auto 0;
+  }
+
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+    margin-top: 12rem;
+  }
+}
+
+/* 1010px */
+@media (width <= 1010px) {
+  body {
+    background-color: #9dbcff;
+  }
+
+  .wrapper {
+    width: 620px;
+    margin: 2rem auto 0;
+  }
+
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    margin-top: 12rem;
+  }
+
+}
+
+
+
+
+
+/* 674px */
+@media (width <= 674px) {
+  body {
+    background-color: red;
+  }
+
+  .wrapper {
+    width: 320px;
+    margin: 2rem auto 0;
+  }
+
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
+    margin-top: 12rem;
+  }
+}
