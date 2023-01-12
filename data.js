@@ -1,4 +1,5 @@
-const adBase = [
+const advertBase = {
+  values: [
   {
     imageSrc: './img/powerbank.jpg',
     userName: 'Joseph',
@@ -51,4 +52,9 @@ const adBase = [
     Get an Anker 767 Portable Power Station (GaNPrime PowerHouse 2048Wh), AC Charging Cable, Car Charging Cable, Solar Charging Cable, Accessories Bag, User Manual, and Our Friendly Customer Service.
     `,
   },
-];
+],
+  quantity: function() {
+    return this.values.length;
+  }, 
+}
+
