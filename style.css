@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  }
+}
 
 html {
   font-size: 62.5%; /* This defines what 1rem is: 1rem = 10px */
@@ -21,15 +21,15 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  margin-bottom: 0;
+  margin-top: 9rem;
   box-sizing: border-box;
-  background-color:#f0f8ff;
+  background-color: #f0f8ff;
   color: #212427;
 }
 
 .container {
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   gap: 2rem;
   margin-top: 4rem;
 }
@@ -89,7 +89,8 @@ body {
   padding-top: 5rem;
 }
 
-.mobile, .message {
+.mobile,
+.message {
   margin-right: 1rem;
   margin-top: 4rem;
   border: none;
@@ -102,23 +103,24 @@ body {
   transition: opacity 0.2s ease-in-out;
 }
 
-.mobile:hover, .message:hover {
+.mobile:hover,
+.message:hover {
   opacity: 0.7;
 }
 
 .btn-back {
- margin-left: 4rem;
+  margin-left: 4rem;
   margin-top: 2rem;
   border: none;
   background: #9dbcff;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
-  color:#fff;
+  color: #fff;
   cursor: pointer;
   transition: opacity 0.2s ease-in-out;
   font-size: 1.7rem;
 }
-  
+
 .btn-back:hover {
   opacity: 0.7;
 }
@@ -207,6 +209,9 @@ nav {
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card-header,
@@ -215,8 +220,17 @@ nav {
   margin-bottom: 2rem;
 }
 
+.card-header {
+  height: 26rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
 .card-header img {
-  width: 100%;
+  max-height: 26rem;
+  max-width: 26rem;
   display: block;
 }
 
@@ -316,25 +330,8 @@ nav {
   padding: 1rem;
 }
 
-#advert-content #image {
-  padding: 0.5rem;
-  border: none;
-}
-
-#advert-content #image::file-selector-button {
-  margin-right: 2rem;
-  border: none;
-  background: #9dbcff;
-  padding: 1rem 2rem;
-  border-radius: 0.5rem;
-  color:#fff;
-  cursor: pointer;
-  transition: opacity 0.2s ease-in-out;
-  font-size: 1.7rem;
-}
-
-#advert-content #image::file-selector-button:hover {
-  opacity: 0.7;
+#advert-content .preview img {
+  padding-top: 6rem;
 }
 
 #advert-form #submitBtn {

@@ -8,6 +8,11 @@
     <title>Create an Advertisement</title>
   </head>
   <body>
+    <nav>
+      <div class="wrapper nav">
+        <a href="/" class="logo"><img src="./img/logo.svg" alt="logo" /></a>
+      </div>
+    </nav>
     <div class="wrapper">
       <div class="form-header">
         <h1>Create an Advertisement</h1>
@@ -32,13 +37,9 @@
           <input type="text" name="price" id="price" />
           <label for="advertText">Description</label>
           <textarea name="advertText" id="text" rows="7"></textarea>
-          <label for="userImage">Add an image</label>
-          <input
-            type="file"
-            name="userImage"
-            id="image"
-            accept="image/*,.pdf"
-          />
+          <label for="userImage">Provide link to the image</label>
+          <input type="url" name="userImage" id="image" />
+          <div class="preview"></div>
         </div>
         <input
           name="submit"
@@ -48,6 +49,7 @@
         />
       </form>
     </div>
+    <script src="./data.js"></script>
     <script src="./app.js"></script>
   </body>
 </html>
