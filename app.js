@@ -10,7 +10,7 @@ const advertItem = {};
 function errorHandling(obj) {
   try {
     for (const key in obj) {
-      if (obj[key] == "") {
+      if (obj[key] == '') {
         throw `One or more fields are EMPTY`; // generates an exception
       }
     }
@@ -36,29 +36,38 @@ advertForm.addEventListener('submit', (e) => {
   errorHandling(advertItem);
 });
 
-
+/////////////////// Mine code ///////////////////////////////
 // Code to render single item
+
+// Image field
 const photo = document.querySelector('.photo');
+const singleImg = photo.querySelector('img');
+
+//Name field
 const userName = document.querySelector('.name');
-const term = document.querySelector('.name-general');
 
-const adBase = [
-  {
-    image: `${'<img src="./powerbank.jpg" alt="item" />'}`,
-    name: 'Joseph',
-    term:  `<p>User since: <b>December 2022</b></p>`,
-  },
-];
+// Term field
+const term = document.querySelector('.term');
+const termDate = term.querySelector('b');
 
-// function to inject advertisement data 
-const injectData = () => {
-  photo.innerHTML = adBase[0].image;
-  userName.innerText = adBase[0].name;  
-  
-}
+// Title field
+const descClass = document.querySelector('.description');
+const title = descClass.querySelector('h2');
 
-injectData();
+// Price field
+const price = document.querySelector('.price');
 
-// <p>User since: <b>December 2022</b></p>
-//  <p class="deals"><b>+500 </b>Successful deals</p>
+// Description field
+const description = document.querySelector('article');
 
+// function to inject advertisement data
+const injectData = (idx) => {
+  singleImg.setAttribute('src', adBase[idx].imageSrc);
+  userName.innerText = adBase[idx].userName;
+  termDate.innerText = adBase[idx].term;
+  title.innerText = adBase[idx].title;
+  price.innerText = adBase[idx].price;
+  description.innerText = adBase[idx].description;
+};
+
+injectData(2);

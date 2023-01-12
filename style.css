@@ -144,16 +144,9 @@ body {
   font-weight: 700;
 }
 
-.description li {
+.description article {
   font-size: 2rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 2rem;
-  list-style: none;
-}
-
-li:last-child {
-  padding-bottom: 7rem;
+  padding: 2rem 2rem 4rem 2rem;
 }
 
 /* Home page Styles */
