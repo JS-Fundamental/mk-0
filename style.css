@@ -273,6 +273,10 @@ nav {
   margin: 2rem 0 6rem;
 }
 
+.form-header {
+  margin-top: 9rem;
+}
+
 #advert-form {
   background-color: #fff;
   width: 60rem;
