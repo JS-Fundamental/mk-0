@@ -509,3 +509,19 @@ nav {
     padding-top: 0;
   }
 }
+
+/* Form page 674px */
+@media (width <= 674px) {
+  .form-header {
+     display: none;
+  }
+
+  .wrapper {
+    display: flex;
+  }
+
+  #advert-form {
+    padding: 4rem 4rem;
+    margin-top: 7rem;
+  }
+}
