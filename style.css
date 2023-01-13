@@ -357,7 +357,7 @@ nav {
 
 /* Media queries. CSS Breakpoints based on content. */
 /* This means you add a breakpoint when the content looks misaligned */
-/* 1400px */
+/* Main page 1400px */
 @media (width <= 1400px) {
   .wrapper {
     width: 960px;
@@ -370,7 +370,7 @@ nav {
   }
 }
 
-/* 1010px */
+/* Main page 1010px */
 @media (width <= 1010px) {
   .wrapper {
     width: 620px;
@@ -382,7 +382,7 @@ nav {
   }
 }
 
-/* 674px */
+/* Main page 674px */
 @media (width <= 674px) {
   .nav {
     padding: 1rem 0;
@@ -406,5 +406,106 @@ nav {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 1rem;
     margin-top: 7rem;
+  }
+}
+
+/* Post page 860px */
+@media (width <= 860px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .user {
+    width: 50rem;
+    height: 48rem;
+  }
+
+  .btn-back {
+    margin-left: 14rem;
+  }
+
+  .description {
+    width: 50rem;
+  }
+
+  .description article {
+    padding-top: 1rem ;
+  }
+}
+
+/* Post page 674px */
+@media (width <= 674px) {
+  .main-container {
+    margin-top: 2rem;
+  }
+
+  .container {
+    gap: 1rem;
+    margin-top: 4rem;
+  }
+
+  .photo {
+    width: 32rem;
+    height: 30rem;
+  }
+
+  .photo img {
+    width: 19rem;
+  }
+
+  .user {
+    width: 32rem;
+    height: 41rem;
+  }
+
+  .user h2 {
+    padding: 2rem 2rem;
+    font-size: 2.5rem;
+  }
+
+  .user-info {
+    font-size: 1.1rem;
+  }
+
+  .user-icon {
+    font-size: 3.2rem;
+  }
+
+  .name-general p:first-child {
+    font-size: 1.8rem;
+  }
+
+  .deals {
+    font-size: 1.8rem;
+  }
+
+  .communication {
+    padding-top: 2rem;
+  }
+
+  .btn-back {
+    margin-left: 5rem;
+  }
+
+  .description {
+    width: 32rem;
+    margin-top: 1rem;
+  }
+
+  .description h2 {
+    padding-top: 2rem;
+    font-size: 2rem;
+  }
+
+  .price {
+    font-size: 3rem;
+  }
+
+  .description article {
+    font-size: 1.7rem;
+    padding-top: 0;
   }
 }
